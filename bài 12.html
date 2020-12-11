@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="bai12_tienvay" placeholder="tien vay">
+<input type="text" id="bai12_sothang" placeholder="so thang vay">
+<input type="text" id="bai12_laisuat_theothang" placeholder="lai suat theo thang (%)" onchange="bai12()">
+<p id="bai12_output"></p>
+<script>
+    function bai12()
+{
+    let tienvay=+document.getElementById('bai12_tienvay').value;
+    let lai_thang=+document.getElementById('bai12_laisuat_theothang').value;
+    let thoihan=+document.getElementById('bai12_sothang').value;
+    let output=tienvay;
+    while(thoihan>0)
+    {
+        output+=output*lai_thang/100;
+        thoihan-=1;
+    }
+    document.getElementById('bai12_output').innerHTML='so tien phai tra : '+output;
+}</script>
+</body>
+</html>

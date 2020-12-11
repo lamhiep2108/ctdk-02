@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="ok" onchange="nhap()"  placeholder="nhap">
+<p id="result"></p>
+<script>
+    function nhap(){
+        let value = document.getElementById("ok").value;
+        document.getElementById("result").innerHTML=value*3.2808+ 'ft';
+
+    }
+</script>
+</body>
+</html>

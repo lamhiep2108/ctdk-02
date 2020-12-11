@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="bai8_input" placeholder="tuoi" onchange="bai8()">
+<p id="bai8_output"></p>
+<script>
+function bai8()
+{
+let age=+document.getElementById('bai8_input').value;
+if(Number.isSafeInteger(age))
+{
+if(age>0 && age<120)
+{
+document.getElementById('bai8_output').innerHTML='La tuoi 1 nguoi !';
+}
+else
+{
+document.getElementById('bai8_output').innerHTML='Khong la tuoi 1 nguoi !';
+}
+}
+else
+{
+document.getElementById('bai8_output').innerHTML='Khong la tuoi 1 nguoi !';
+}
+}
+</script>
+</body>
+</html>

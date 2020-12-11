@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <input type="text" id="bai7_a" placeholder="a">x^2+
+        <input type="text" id="bai7_b" placeholder="b">x+
+        <input type="text" id="bai7_c" placeholder="c" onchange="bai7()">=0
+        <p id="bai7_output"></p>
+<script>
+    function bai7()
+    {
+        let a=+document.getElementById('bai7_a').value;
+        let b=+document.getElementById('bai7_b').value;
+        let c=+document.getElementById('bai7_c').value;
+        let output='';
+        if(a==0)
+        {
+            if(b==0)
+            {
+                if(c==0)
+                {
+                    output='VSN';
+                }
+                else
+                {
+                    output='VN';
+                }
+            }
+            else
+            {
+                output='1 nghiem : '+(-c)/b;
+            }
+        }
+        else
+        {
+            let delta=b*b-4*a*c;
+            if(delta>0)
+            {
+                output='2 nghiem :'+((-b-Math.sqrt(delta))/2/a)+' va '+((-b+Math.sqrt(delta))/2/a);
+            }
+            else if(delta==0)
+            {
+                output='1 nghiem :'+(-b/2/a);
+            }
+            else
+            {
+                output='VN';
+            }
+        }
+        document.getElementById('bai7_output').innerHTML=output;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="bai9_a" placeholder="3 canh tam giac">
+<input type="text" id="bai9_b" placeholder="3 canh tam giac">
+<input type="text" id="bai9_c" placeholder="3 canh tam giac" onchange="bai9()">
+<p id="bai9_output"></p>
+<script>
+    function bai9()
+    {
+        let a=+document.getElementById('bai9_a').value;
+        let b=+document.getElementById('bai9_b').value;
+        let c=+document.getElementById('bai9_c').value;
+        if((a+b>c)&&(b+c>a)&&(c+a>b))
+        {
+            document.getElementById('bai9_output').innerHTML='La tam giac !';
+        }
+        else
+        {
+            document.getElementById('bai9_output').innerHTML='Khong la tam giac !';
+        }
+    }
+</script>
+</body>
+</html>
